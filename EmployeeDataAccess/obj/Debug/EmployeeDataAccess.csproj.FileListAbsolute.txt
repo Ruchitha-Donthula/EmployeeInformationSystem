@@ -7,3 +7,5 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Deb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CopyComplete
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Debug\log4net.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Debug\log4net.xml

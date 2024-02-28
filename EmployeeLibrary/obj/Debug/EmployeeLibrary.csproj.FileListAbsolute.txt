@@ -3,3 +3,7 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\log4net.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\log4net.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.csproj.CopyComplete

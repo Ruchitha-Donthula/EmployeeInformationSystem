@@ -1,17 +1,25 @@
-﻿using EmployeeLibrary;
+﻿using EmployeeDataAccess;
+using EmployeeLibrary;
+using log4net;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Configuration;
-using EmployeeDataAccess;
+using System.IO;
 
 namespace EmployeeSystem
 {
     public class EmployeeSystem
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(EmployeeSystem));
+
         static void Main(string[] args)
         {
+            // Configure log4net
+            log4net.Config.XmlConfigurator.Configure();
+
             string employeedetailsfile = ConfigurationManager.AppSettings["employeedetailsfile"];
+
+            log.Info("Employee System started.");
 
             Console.WriteLine("Choose one from below options 1 to 8");
             Console.WriteLine("1.Add Employee\n2.Update Employee\n3.Delete Employee\n4.Get Employee\n5.Get All Employees\n6.Read Employee data\n7.Save Employee Data\n8.Exit");
@@ -45,12 +53,14 @@ namespace EmployeeSystem
 
                         try
                         {
-                            Employee.AddEmployee(id, name, salary);
+                            new Employee().AddEmployee(id, name, salary);
                             Console.WriteLine("Employee added successfully.");
+                            log.Info($"Employee added: ID - {id}, Name - {name}, Salary - {salary}");
                         }
                         catch (FormatException ex)
                         {
                             Console.WriteLine(ex.Message);
+                            log.Error("Error adding employee.", ex);
                         }
                         break;
                     case 2:
@@ -69,12 +79,14 @@ namespace EmployeeSystem
 
                         try
                         {
-                            Employee.UpdateEmployeeData(id, name, salary);
+                            new Employee().UpdateEmployeeData(id, name, salary);
                             Console.WriteLine("Employee updated successfully.");
+                            log.Info($"Employee updated: ID - {id}, Name - {name}, Salary - {salary}");
                         }
                         catch (FormatException ex)
                         {
                             Console.WriteLine(ex.Message);
+                            log.Error("Error updating employee.", ex);
                         }
                         break;
                     case 3:
@@ -84,8 +96,9 @@ namespace EmployeeSystem
                             Console.WriteLine("Invalid input. Please enter a valid integer for employee ID.");
                         }
 
-                        Employee.DeleteEmployee(id);
+                        new Employee().DeleteEmployee(id);
                         Console.WriteLine("Employee deleted successfully.");
+                        log.Info($"Employee deleted: ID - {id}");
                         break;
                     case 4:
                         Console.WriteLine("Enter ID of employee: ");
@@ -100,15 +113,18 @@ namespace EmployeeSystem
                             if (emp != null)
                             {
                                 Console.WriteLine(emp.EmployeeID + "," + emp.EmployeeName + "," + emp.EmployeeSalary);
+                                log.Info($"Employee retrieved: ID - {emp.EmployeeID}, Name - {emp.EmployeeName}, Salary - {emp.EmployeeSalary}");
                             }
                             else
                             {
                                 Console.WriteLine("Employee not found.");
+                                log.Warn($"Employee not found for ID: {id}");
                             }
                         }
                         catch (NullReferenceException ex)
                         {
                             Console.WriteLine(ex.Message);
+                            log.Error("Error retrieving employee.", ex);
                         }
                         break;
                     case 5:
@@ -118,11 +134,13 @@ namespace EmployeeSystem
                             foreach (Employee emp in employees)
                             {
                                 Console.WriteLine(emp.EmployeeID + "," + emp.EmployeeName + "," + emp.EmployeeSalary);
+                                log.Info($"Employee retrieved: ID - {emp.EmployeeID}, Name - {emp.EmployeeName}, Salary - {emp.EmployeeSalary}");
                             }
                         }
                         catch (NullReferenceException ex)
                         {
                             Console.WriteLine(ex.Message);
+                            log.Error("Error retrieving employees.", ex);
                         }
                         break;
                     case 6:
@@ -130,26 +148,31 @@ namespace EmployeeSystem
                         {
                             AccessEmployeeData.ReadEmployeeData(employeedetailsfile);
                             Console.WriteLine("Employee data read successfully.");
+                            log.Info("Employee data read successfully.");
                         }
                         catch (FileNotFoundException ex)
                         {
                             Console.WriteLine($"{ex.Message}");
+                            log.Error("Error reading employee data.", ex);
                         }
                         catch (ConfigurationErrorsException ex)
                         {
                             Console.WriteLine($"{ex.Message}");
+                            log.Error("Error reading employee data.", ex);
                         }
                         break;
                     case 7:
                         try
                         {
                             List<Employee> employees = new Employee().GetAllEmployees();
-                            SavingEmployeeData.SaveEmployeeData(employees,employeedetailsfile);
+                            SavingEmployeeData.SaveEmployeeData(employees, employeedetailsfile);
                             Console.WriteLine("Employee data saved successfully.");
+                            log.Info("Employee data saved successfully.");
                         }
                         catch (ConfigurationErrorsException ex)
                         {
                             Console.WriteLine($"{ex.Message}");
+                            log.Error("Error saving employee data.", ex);
                         }
                         break;
                     case 8:

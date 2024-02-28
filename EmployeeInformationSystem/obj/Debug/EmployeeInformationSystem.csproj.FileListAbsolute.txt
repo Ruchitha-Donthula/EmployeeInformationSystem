@@ -1,2 +1,14 @@
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\EmployeeInformationSystem.exe.config
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\EmployeeInformationSystem.exe
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\EmployeeInformationSystem.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\EmployeeDataAccess.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\EmployeeLibrary.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\log4net.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\EmployeeDataAccess.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\log4net.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.csproj.CopyComplete
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.exe
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.pdb
