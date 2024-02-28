@@ -1,0 +1,5 @@
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\EmployeeLibrary.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.pdb

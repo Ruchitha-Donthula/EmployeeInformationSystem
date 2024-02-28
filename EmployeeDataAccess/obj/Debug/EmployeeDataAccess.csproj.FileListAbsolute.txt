@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Debug\EmployeeLibrary.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Debug\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csproj.CopyComplete
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb
