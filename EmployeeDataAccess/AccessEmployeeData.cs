@@ -1,37 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using log4net;
+using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EmployeeLibrary;
 
 namespace EmployeeDataAccess
 {
     public class AccessEmployeeData
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(AccessEmployeeData));
+
         public static void ReadEmployeeData(string filepath)
         {
-            using (StreamReader reader = new StreamReader(filepath))
+            try
             {
-                while (!reader.EndOfStream)
+                if (File.Exists(filepath))
                 {
-                    string line = reader.ReadLine();
-                    string[] parts = line.Split(',');
-
-                    int id = int.Parse(parts[0]);
-                    string name = parts[1];
-                    int salary = int.Parse(parts[2]);
-
-                    Employee.employees.Add(new EmployeeLibrary.Employee
+                    using (StreamReader reader = new StreamReader(filepath))
                     {
-                        EmployeeID = id,
-                        EmployeeName = name,
-                        EmployeeSalary = salary,
-                    });
+                        while (!reader.EndOfStream)
+                        {
+                            string line = reader.ReadLine();
+                            string[] parts = line.Split(',');
+
+                            if (parts.Length == 3)
+                            {
+                                if (int.TryParse(parts[0], out int id) && int.TryParse(parts[2], out int salary))
+                                {
+                                    string name = parts[1];
+                                    EmployeeLibrary.Employee.employees.Add(new EmployeeLibrary.Employee
+                                    {
+                                        EmployeeID = id,
+                                        EmployeeName = name,
+                                        EmployeeSalary = salary,
+                                    });
+                                }
+                                else
+                                {
+                                    Log.Error($"Invalid data format in line: {line}");
+                                }
+                            }
+                            else
+                            {
+                                Log.Error($"Invalid data format in line: {line}");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Log.Error($"File not found at path: {filepath}");
                 }
             }
-          
+            catch (Exception ex)
+            {
+                Log.Error($"An error occurred while reading data: {ex.Message}", ex);
+                // Rethrow the exception to ensure it's handled by the ExceptionHandlingFilter
+                throw;
+            }
         }
     }
 }

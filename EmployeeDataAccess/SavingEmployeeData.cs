@@ -1,20 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using log4net;
+using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace EmployeeDataAccess
 {
     public class SavingEmployeeData
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(SavingEmployeeData));
+
         public static void SaveEmployeeData(List<EmployeeLibrary.Employee> employees, string filepath)
         {
-            using (StreamWriter writer = new StreamWriter(filepath))
+            try
             {
-                foreach (EmployeeLibrary.Employee emp in employees)
+                using (StreamWriter writer = new StreamWriter(filepath))
                 {
-                    writer.WriteLine($"{emp.EmployeeID},{emp.EmployeeName},{emp.EmployeeSalary}");
+                    foreach (EmployeeLibrary.Employee emp in employees)
+                    {
+                        writer.WriteLine($"{emp.EmployeeID},{emp.EmployeeName},{emp.EmployeeSalary}");
+                    }
                 }
             }
+            catch (Exception)
+            {
+                throw;
+            }
         }
-
     }
 }

@@ -161,6 +161,8 @@
     <Compile Include="Controllers\EmployeeWebServicesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Filters\ExceptionHandlingFilter.cs" />
+    <Compile Include="Filters\RequestResponseLoggingFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
