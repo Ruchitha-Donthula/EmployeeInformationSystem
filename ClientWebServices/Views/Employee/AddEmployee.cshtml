@@ -1,0 +1,38 @@
+﻿@model ClientWebServices.Models.Employee
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Employee</title>
+</head>
+<body>
+    <div>
+        <h2>Add Employee</h2>
+        @using (Html.BeginForm("SubmitEmployee", "Employee", FormMethod.Post))
+        {
+            <div>
+                @Html.LabelFor(model => model.EmployeeID)
+                @Html.TextBoxFor(model => model.EmployeeID)
+                @Html.ValidationMessageFor(model => model.EmployeeID)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.EmployeeName)
+                @Html.TextBoxFor(model => model.EmployeeName)
+                @Html.ValidationMessageFor(model => model.EmployeeName)
+            </div>
+            <div>
+                @Html.LabelFor(model => model.EmployeeSalary)
+                @Html.TextBoxFor(model => model.EmployeeSalary)
+                @Html.ValidationMessageFor(model => model.EmployeeSalary)
+            </div>
+            <div>
+                <input type="submit" value="Submit" />
+            </div>
+        }
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script> <!-- jQuery Validation plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script> <!-- jQuery Unobtrusive Validation -->
+</body>
+</html>
