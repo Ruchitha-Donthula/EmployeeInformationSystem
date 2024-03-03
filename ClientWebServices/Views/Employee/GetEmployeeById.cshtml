@@ -1,0 +1,27 @@
+﻿@model EmployeeLibrary.Employee
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Details</title>
+</head>
+<body>
+    <div>
+        <h2>Employee Details</h2>
+        @if (Model != null)
+        {
+            <ul>
+                <li><strong>Employee ID:</strong> @Model.EmployeeID</li>
+                <li><strong>Name:</strong> @Model.EmployeeName</li>
+                <li><strong>Salary:</strong> @Model.EmployeeSalary</li>
+                <!-- Add other properties as needed -->
+            </ul>
+        }
+        else
+        {
+            <p>Employee not found.</p>
+        }
+    </div>
+</body>
+</html>

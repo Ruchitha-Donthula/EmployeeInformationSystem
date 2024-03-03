@@ -22,8 +22,7 @@ namespace EmployeeServices.Controllers
             try
             {
                 AccessEmployeeData.ReadEmployeeData(employeeDetailsFilePath);
-                List<Employee> employees = new Employee().GetAllEmployees();
-                return Json(employees);
+                return Ok();
             }
             catch (Exception)
             {
@@ -55,7 +54,7 @@ namespace EmployeeServices.Controllers
         public IHttpActionResult AddEmployee(Employee employee)
         {
             new Employee().AddEmployee(employee.EmployeeID, employee.EmployeeName, employee.EmployeeSalary);
-            return Ok("Employee added successfully.");
+            return Ok(employee);
         }
 
         [HttpPost]
@@ -67,8 +66,9 @@ namespace EmployeeServices.Controllers
             return Ok("Employee updated successfully.");
         }
 
-        [HttpPost]
-        [Route("api/DeleteEmployee/{id}")]
+
+        [HttpGet]
+        [Route("api/DeleteEmployee")]
         [RequestResponseLoggingFilter]
         public IHttpActionResult DeleteEmployee(int id)
         {
@@ -86,7 +86,7 @@ namespace EmployeeServices.Controllers
             {
                 List<Employee> employees = new Employee().GetAllEmployees();
                 SavingEmployeeData.SaveEmployeeData(employees, employeeDetailsFilePath);
-                return Ok("Employee data saved successfully.");
+                return Ok();
             }
             catch (Exception)
             {

@@ -21,9 +21,11 @@ namespace EmployeeDataAccess
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+               
+                Log.Error("An error occurred while saving employee data.", ex);
+                throw; 
             }
         }
     }

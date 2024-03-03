@@ -26,12 +26,24 @@ namespace EmployeeLibrary
         public void UpdateEmployeeData(int id, string name, int salary)
         {
             Employee employee = employees.FirstOrDefault(emp => emp.EmployeeID == id);
-            if (employee != null)
+            try
             {
-                employee.EmployeeName = name;
-                employee.EmployeeSalary = salary;
+                if (employee != null)
+                {
+                    employee.EmployeeName = name;
+                    employee.EmployeeSalary = salary;
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+            catch
+            {
+                throw; 
             }
         }
+
 
         public void DeleteEmployee(int id)
         {

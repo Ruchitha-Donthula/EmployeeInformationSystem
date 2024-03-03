@@ -1,14 +1,22 @@
-﻿
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
 <body>
-    <div> 
-        <h1>Hello Welcome to Index Page</h1>
+    <div>
+        <h1>Hello, Welcome to the Employee Information System Index Page</h1>
+        <ul>
+            <li><a href="@Url.Action("AddEmployeeForm", "Employee")">Add Employee</a></li>
+            <li><a href="@Url.Action("UpdateEmployeeForm", "Employee")">Update Employee</a></li>
+            <li><a href="@Url.Action("GetAllEmployees", "Employee")">View All Employees</a></li>
+            <li><a href="@Url.Action("SaveEmployeeData", "Employee")">Save Employee Data</a></li>
+            <li><a href="@Url.Action("ReadEmployeeData", "Employee")">Read Employee Data</a></li>
+            <li><a href="@Url.Action("InputGetEmployeeId", "Employee")">Get Employee By ID</a></li>
+            <li><a href="@Url.Action("InputDeleteEmployeeId", "Employee")">Delete Employee By ID</a></li>
+            <!-- Add more links for other actions if needed -->
+        </ul>
     </div>
 </body>
 </html>

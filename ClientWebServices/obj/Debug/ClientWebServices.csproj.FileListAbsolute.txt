@@ -51,6 +51,8 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\rosl
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\roslyn\VBCSCompiler.exe
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Antlr3.Runtime.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeClientServices.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeLibrary.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Newtonsoft.Json.dll
@@ -62,6 +64,9 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Syst
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.WebPages.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.WebPages.Razor.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\WebGrease.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeClientServices.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeClientServices.dll.config
+C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeLibrary.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.Helpers.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.Mvc.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.Optimization.xml
