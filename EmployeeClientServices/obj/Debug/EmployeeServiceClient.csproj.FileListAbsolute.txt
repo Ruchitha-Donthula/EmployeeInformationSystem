@@ -3,7 +3,6 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeClientServices.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeLibrary.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeServices.dll
-C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Newtonsoft.Json.Bson.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Buffers.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Memory.dll
@@ -16,6 +15,7 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.Optimization.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.Mvc.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeDataAccess.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\WebGrease.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.WebPages.dll
@@ -27,8 +27,6 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeServices.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeServices.dll.config
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Newtonsoft.Json.Bson.pdb
-C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Newtonsoft.Json.Bson.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Buffers.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Memory.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Net.Http.Formatting.xml
@@ -40,6 +38,7 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.Optimization.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.Mvc.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeDataAccess.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.WebPages.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Web.Razor.xml
@@ -50,5 +49,3 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\obj
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\obj\Debug\EmployeeServiceClient.csproj.CopyComplete
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\obj\Debug\EmployeeClientServices.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\obj\Debug\EmployeeClientServices.pdb
-C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeDataAccess.dll
-C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeDataAccess.pdb

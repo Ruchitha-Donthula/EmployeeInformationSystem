@@ -67,6 +67,7 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\WebG
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeClientServices.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeClientServices.dll.config
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Newtonsoft.Json.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.Helpers.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.Mvc.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.Optimization.xml
@@ -74,7 +75,6 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Syst
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.WebPages.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\System.Web.WebPages.Razor.xml
-C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Newtonsoft.Json.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Antlr3.Runtime.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\ClientWebServices\obj\Debug\ClientWebServices.csproj.AssemblyReference.cache

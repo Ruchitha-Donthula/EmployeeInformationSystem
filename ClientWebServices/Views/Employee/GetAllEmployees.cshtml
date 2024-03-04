@@ -1,4 +1,4 @@
-﻿@model List<EmployeeLibrary.Employee>
+﻿@model List<ClientWebServices.Models.Employee>
 
 <!DOCTYPE html>
 <html>
@@ -32,6 +32,9 @@
                 <th>Employee ID</th>
                 <th>Name</th>
                 <th>Salary</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>View</th>
             </tr>
             @foreach (var employee in Model)
             {
@@ -39,6 +42,9 @@
                     <td>@employee.EmployeeID</td>
                     <td>@employee.EmployeeName</td>
                     <td>@employee.EmployeeSalary</td>
+                    <td><button onclick="editEmployee('@employee.EmployeeID')">Edit</button></td>
+                    <td><button onclick="deleteEmployee('@employee.EmployeeID')">Delete</button></td>
+                    <td><button onclick="viewEmployee('@employee.EmployeeID')">View</button></td>
                 </tr>
             }
         </table>
@@ -47,6 +53,24 @@
     {
         <p>No employees found.</p>
     }
+
+    <script>
+        function editEmployee(employeeID) {
+            // Redirect to the UpdateEmployee action with the employee ID as parameter
+            window.location.href = "/Employee/UpdateEmployeeForm?id=" + employeeID;
+        }
+
+        function deleteEmployee(employeeID) {
+            // Redirect to the DeleteEmployee action with the employee ID as parameter
+            window.location.href = "/Employee/DeleteEmployee?id=" + employeeID;
+        }
+
+        function viewEmployee(employeeID) {
+            // Redirect to the GetEmployeeById action with the employee ID as parameter
+            window.location.href = "/Employee/GetEmployeeById?id=" + employeeID;
+        }
+    </script>
+
 
 </body>
 </html>

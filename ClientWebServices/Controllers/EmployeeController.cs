@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using EmployeeLibrary;
 using EmployeeServiceClient;
+using ClientWebServices.Models;
 
 namespace ClientWebServices.Controllers
 {
@@ -27,7 +28,7 @@ namespace ClientWebServices.Controllers
         /// <returns>The view containing the employee addition form.</returns>
         public ActionResult AddEmployeeForm()
         {
-            var employee = new Models.Employee(); 
+            var employee = new Models.Employee();
             return View(employee);
         }
 
@@ -89,9 +90,66 @@ namespace ClientWebServices.Controllers
         }
 
         /// <summary>
+        /// Retrieves all employees.
+        /// </summary>
+        /// <returns>A view containing the list of all employees.</returns>
+        [HttpGet]
+        public async Task<ActionResult> GetAllEmployees()
+        {
+            ServiceClient client = new ServiceClient("http://localhost:44393/");
+
+            try
+            {
+                List<EmployeeLibrary.Employee> libraryEmployees = await client.GetAllEmployees();
+                List<Models.Employee> employees = new List<Models.Employee>();
+                foreach (var libraryEmployee in libraryEmployees)
+                {
+                    var modelEmployee = EmployeeHelper.GetEmployeeViewModelFromModel(libraryEmployee);
+                    employees.Add(modelEmployee);
+                }
+
+                return View("GetAllEmployees", employees);
+            }
+            catch (Exception ex)
+            {
+                return Content($"An error occurred while reading employee data: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Retrieves an employee by their ID.
+        /// </summary>
+        /// <param name="id">The ID of the employee to retrieve.</param>
+        /// <returns>A view containing the details of the specified employee.</returns>
+        [HttpGet]
+        public async Task<ActionResult> GetEmployeeById(int id)
+        {
+            ServiceClient client = new ServiceClient("http://localhost:44393/");
+
+            try
+            {
+                EmployeeLibrary.Employee libraryEmployee = await client.GetEmployeeById(id);
+
+                if (libraryEmployee != null)
+                {
+                    var modelEmployee = EmployeeHelper.GetEmployeeViewModelFromModel(libraryEmployee);
+                    return View("GetEmployeeById", modelEmployee);
+                }
+                else
+                {
+                    return Content("Employee not found");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Content($"An error occurred while getting employee data: {ex.Message}");
+            }
+        }
+
+        /// <summary>
         /// Saves employee data.
         /// </summary>
-        /// <returns>A view indicating the success or failure of the operation.</returns>
+        /// <returns>A view containing a message indicating the success of the operation.</returns>
         [HttpGet]
         public async Task<ActionResult> SaveEmployeeData()
         {
@@ -113,80 +171,6 @@ namespace ClientWebServices.Controllers
             catch (Exception ex)
             {
                 return Content($"<div style=\"text-align:center;\">An error occurred while saving employee data: {ex.Message}</div>");
-            }
-        }
-
-
-        /// <summary>
-        /// Retrieves all employees.
-        /// </summary>
-        /// <returns>A view containing the list of all employees.</returns>
-        [HttpGet]
-        public async Task<ActionResult> GetAllEmployees()
-        {
-            ServiceClient client = new ServiceClient("http://localhost:44393/");
-
-            try
-            {
-                List<Employee> employees = await client.GetAllEmployees();
-
-                return View("GetAllEmployees", employees);
-            }
-            catch (Exception ex)
-            {
-                return Content($"An error occurred while reading employee data: {ex.Message}");
-            }
-        }
-
-        /// <summary>
-        /// Retrieves an employee by their ID.
-        /// </summary>
-        /// <param name="id">The ID of the employee to retrieve.</param>
-        /// <returns>A view containing the details of the specified employee.</returns>
-        [HttpGet]
-        public async Task<ActionResult> GetEmployeeById(int id)
-        {
-            // Initialize the service client
-            ServiceClient client = new ServiceClient("http://localhost:44393/");
-
-            try
-            {
-                Employee employee = await client.GetEmployeeById(id);
-
-                if (employee != null)
-                {
-                    return View("GetEmployeeById", employee);
-                }
-                else
-                {
-                    return Content("Employee not found");
-                }
-            }
-            catch (Exception ex)
-            {
-                return Content($"An error occurred while getting employee data: {ex.Message}");
-            }
-        }
-
-        /// <summary>
-        /// Reads employee data.
-        /// </summary>
-        /// <returns>A view containing a message indicating the success of the operation.</returns>
-        [HttpGet]
-        public async Task<ActionResult> ReadEmployeeData()
-        {
-            ServiceClient client = new ServiceClient("http://localhost:44393/");
-
-            try
-            {
-                await client.ReadEmployeeData();
-                Console.WriteLine("Employee data read successfully");
-                return Content("Employee data read successfully");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred while reading employee data: {ex.Message}");
-                return Content($"An error occurred while reading employee data: {ex.Message}");
             }
         }
 
@@ -241,6 +225,27 @@ namespace ClientWebServices.Controllers
             catch (Exception ex)
             {
                 return Content($"An error occurred while deleting employee: {ex.Message}");
+            }
+        }
+        /// <summary>
+        /// Reads employee data.
+        /// </summary>
+        /// <returns>A view containing a message indicating the success of the operation.</returns>
+        [HttpGet]
+        public async Task<ActionResult> ReadEmployeeData()
+        {
+            ServiceClient client = new ServiceClient("http://localhost:44393/");
+
+            try
+            {
+                await client.ReadEmployeeData();
+                Console.WriteLine("Employee data read successfully");
+                return Content("Employee data read successfully");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while reading employee data: {ex.Message}");
+                return Content($"An error occurred while reading employee data: {ex.Message}");
             }
         }
     }
