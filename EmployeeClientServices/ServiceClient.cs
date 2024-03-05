@@ -37,7 +37,8 @@ namespace EmployeeServiceClient
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(employee));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                HttpResponseMessage response = await _httpClient.PostAsync("api/AddEmployee", content);
+                HttpResponseMessage response = await _httpClient.PostAsync("/api/AddEmployee", content);
+
                 response.EnsureSuccessStatusCode();
 
                 return response.IsSuccessStatusCode;
@@ -62,7 +63,7 @@ namespace EmployeeServiceClient
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync("api/SaveEmployeeData");
+                HttpResponseMessage response = await _httpClient.GetAsync("/api/SaveEmployeeData");
                 response.EnsureSuccessStatusCode(); 
                 return true;
             }
@@ -86,7 +87,7 @@ namespace EmployeeServiceClient
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync("api/GetAllEmployees");
+                HttpResponseMessage response = await _httpClient.GetAsync("/api/GetAllEmployees");
                 response.EnsureSuccessStatusCode(); 
 
                 // Deserialize the response content to a list of Employee objects
@@ -116,7 +117,7 @@ namespace EmployeeServiceClient
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync($"api/GetEmployeeById?id={id}");
+                HttpResponseMessage response = await _httpClient.GetAsync($"/api/GetEmployeeById?id={id}");
                 response.EnsureSuccessStatusCode(); 
 
                 // Deserialize the response content to an Employee object
@@ -144,7 +145,7 @@ namespace EmployeeServiceClient
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync("api/ReadEmployeeData");
+                HttpResponseMessage response = await _httpClient.GetAsync("/api/ReadEmployeeData");
                 response.EnsureSuccessStatusCode(); 
 
                 // Print a success message indicating that the data was read successfully
@@ -173,7 +174,7 @@ namespace EmployeeServiceClient
             {
                 StringContent content = new StringContent(JsonConvert.SerializeObject(employee));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                HttpResponseMessage response = await _httpClient.PostAsync("api/UpdateEmployee", content);
+                HttpResponseMessage response = await _httpClient.PostAsync("/api/UpdateEmployee", content);
                 response.EnsureSuccessStatusCode();
 
                 return response.IsSuccessStatusCode;
@@ -199,7 +200,7 @@ namespace EmployeeServiceClient
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync($"api/DeleteEmployee?id={id}");
+                HttpResponseMessage response = await _httpClient.GetAsync($"/api/DeleteEmployee?id={id}");
                 response.EnsureSuccessStatusCode(); 
 
                 return response.IsSuccessStatusCode;

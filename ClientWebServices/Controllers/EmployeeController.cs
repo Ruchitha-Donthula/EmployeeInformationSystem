@@ -73,7 +73,7 @@ namespace ClientWebServices.Controllers
             if (ModelState.IsValid)
             {
                 EmployeeLibrary.Employee employeeModel = EmployeeHelper.GetEmployeeModelFromViewModel(employee);
-                ServiceClient client = new ServiceClient("http://localhost:44393/");
+                ServiceClient client = new ServiceClient("http://localhost:8084/");
                 bool isSuccess = await client.AddEmployee(employeeModel);
 
                 if (isSuccess)
@@ -82,11 +82,11 @@ namespace ClientWebServices.Controllers
                 }
                 else
                 {
-                    return View("AddEmployee", employee);
+                    return View("AddEmployeeForm", employee);
                 }
             }
 
-            return View("AddEmployee", employee);
+            return View("AddEmployeeForm", employee);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace ClientWebServices.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAllEmployees()
         {
-            ServiceClient client = new ServiceClient("http://localhost:44393/");
+            ServiceClient client = new ServiceClient("http://localhost:8084/");
 
             try
             {
@@ -124,7 +124,7 @@ namespace ClientWebServices.Controllers
         [HttpGet]
         public async Task<ActionResult> GetEmployeeById(int id)
         {
-            ServiceClient client = new ServiceClient("http://localhost:44393/");
+            ServiceClient client = new ServiceClient("http://localhost:8084/");
 
             try
             {
@@ -153,7 +153,7 @@ namespace ClientWebServices.Controllers
         [HttpGet]
         public async Task<ActionResult> SaveEmployeeData()
         {
-            ServiceClient client = new ServiceClient("http://localhost:44393/");
+            ServiceClient client = new ServiceClient("http://localhost:8084/");
 
             try
             {
@@ -185,7 +185,7 @@ namespace ClientWebServices.Controllers
             if (ModelState.IsValid)
             {
                 EmployeeLibrary.Employee employeeModel = EmployeeHelper.GetEmployeeModelFromViewModel(employee);
-                ServiceClient client = new ServiceClient("http://localhost:44393/");
+                ServiceClient client = new ServiceClient("http://localhost:8084/");
                 bool isSuccess = await client.UpdateEmployee(employeeModel);
 
                 if (isSuccess)
@@ -210,7 +210,7 @@ namespace ClientWebServices.Controllers
         {
             try
             {
-                ServiceClient client = new ServiceClient("http://localhost:44393/");
+                ServiceClient client = new ServiceClient("http://localhost:8084/");
                 bool isSuccess = await client.DeleteEmployee(id);
 
                 if (isSuccess)
@@ -234,7 +234,7 @@ namespace ClientWebServices.Controllers
         [HttpGet]
         public async Task<ActionResult> ReadEmployeeData()
         {
-            ServiceClient client = new ServiceClient("http://localhost:44393/");
+            ServiceClient client = new ServiceClient("http://localhost:8084/");
 
             try
             {

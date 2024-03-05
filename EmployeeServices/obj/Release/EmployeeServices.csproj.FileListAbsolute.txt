@@ -87,3 +87,5 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\obj\Relea
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\obj\Release\EmployeeServices.csproj.CopyComplete
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\obj\Release\EmployeeServices.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\obj\Release\EmployeeServices.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\log4net.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\log4net.xml

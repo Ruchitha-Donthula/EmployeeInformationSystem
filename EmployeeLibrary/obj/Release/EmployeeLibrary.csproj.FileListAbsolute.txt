@@ -3,3 +3,9 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Releas
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Release\EmployeeLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Release\EmployeeLibrary.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Release\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Release\log4net.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Release\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Release\log4net.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Release\Newtonsoft.Json.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Release\EmployeeLibrary.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Release\EmployeeLibrary.csproj.CopyComplete
