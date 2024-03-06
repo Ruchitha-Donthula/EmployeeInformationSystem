@@ -5,11 +5,11 @@ using System.IO;
 
 namespace EmployeeDataAccess
 {
-    public class SavingEmployeeData
+    public class SavingEmployees
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(SavingEmployeeData));
+        private static readonly ILog Log = LogManager.GetLogger(typeof(SavingEmployees));
 
-        public static void SaveEmployeeData(List<EmployeeLibrary.Employee> employees, string filepath)
+        public static void SaveEmployees(List<EmployeeLibrary.Employee> employees, string filepath)
         {
             try
             {

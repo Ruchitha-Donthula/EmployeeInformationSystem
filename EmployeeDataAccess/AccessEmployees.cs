@@ -4,11 +4,11 @@ using System.IO;
 
 namespace EmployeeDataAccess
 {
-    public class AccessEmployeeData
+    public class AccessEmployees
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(AccessEmployeeData));
+        private static readonly ILog Log = LogManager.GetLogger(typeof(AccessEmployees));
 
-        public static void ReadEmployeeData(string filepath)
+        public static void ReadEmployees(string filepath)
         {
             try
             {

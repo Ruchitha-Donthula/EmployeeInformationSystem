@@ -146,7 +146,7 @@ namespace EmployeeSystem
                     case 6:
                         try
                         {
-                            AccessEmployeeData.ReadEmployeeData(employeedetailsfile);
+                            AccessEmployees.ReadEmployeeData(employeedetailsfile);
                             Console.WriteLine("Employee data read successfully.");
                             log.Info("Employee data read successfully.");
                         }
@@ -165,7 +165,7 @@ namespace EmployeeSystem
                         try
                         {
                             List<Employee> employees = new Employee().GetAllEmployees();
-                            SavingEmployeeData.SaveEmployeeData(employees, employeedetailsfile);
+                            SavingEmployees.SaveEmployeeData(employees, employeedetailsfile);
                             Console.WriteLine("Employee data saved successfully.");
                             log.Info("Employee data saved successfully.");
                         }

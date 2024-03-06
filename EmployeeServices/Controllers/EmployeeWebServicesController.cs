@@ -14,14 +14,14 @@ namespace EmployeeServices.Controllers
 
         // Add action filter to log requests and responses
         [HttpGet]
-        [Route("api/ReadEmployeeData")]
+        [Route("api/ReadEmployees")]
         [RequestResponseLoggingFilter]
         [ExceptionHandlingFilter] 
-        public IHttpActionResult ReadEmployeeData()
+        public IHttpActionResult ReadEmployees()
         {
             try
             {
-                AccessEmployeeData.ReadEmployeeData(employeeDetailsFilePath);
+                AccessEmployees.ReadEmployees(employeeDetailsFilePath);
                 return Ok();
             }
             catch (Exception)
@@ -77,15 +77,15 @@ namespace EmployeeServices.Controllers
         }
 
         [HttpGet]
-        [Route("api/SaveEmployeeData")]
+        [Route("api/SaveEmployees")]
         [RequestResponseLoggingFilter]
         [ExceptionHandlingFilter]
-        public IHttpActionResult SaveEmployeeData()
+        public IHttpActionResult SaveEmployees()
         {
             try
             {
                 List<Employee> employees = new Employee().GetAllEmployees();
-                SavingEmployeeData.SaveEmployeeData(employees, employeeDetailsFilePath);
+                SavingEmployees.SaveEmployees(employees, employeeDetailsFilePath);
                 return Ok();
             }
             catch (Exception)
