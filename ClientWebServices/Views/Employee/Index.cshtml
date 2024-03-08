@@ -3,20 +3,46 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <style>
+        /* Style for link when not hovered */
+        a {
+            color: black;
+            text-decoration: none; /* Remove underline */
+        }
+
+            /* Style for link when hovered */
+            a:hover {
+                color: blue; /* Change color on hover */
+            }
+    </style>
 </head>
 <body>
     <div>
         <h1>Hello, Welcome to the Employee Information System Index Page</h1>
         <ul>
             <li><a href="@Url.Action("AddEmployeeForm", "Employee")">Add Employee</a></li>
-            <li><a href="@Url.Action("UpdateEmployeeForm", "Employee")">Update Employee</a></li>
             <li><a href="@Url.Action("GetAllEmployees", "Employee")">View All Employees</a></li>
-            <li><a href="@Url.Action("SaveEmployeeData", "Employee")">Save Employee Data</a></li>
-            <li><a href="@Url.Action("ReadEmployeeData", "Employee")">Read Employee Data</a></li>
+            <li><a href="@Url.Action("SaveEmployees", "Employee")">Save Employee Data</a></li>
+            <li><a href="@Url.Action("ReadEmployees", "Employee")">Read Employee Data</a></li>
             <li><a href="@Url.Action("InputGetEmployeeId", "Employee")">Get Employee By ID</a></li>
             <li><a href="@Url.Action("InputDeleteEmployeeId", "Employee")">Delete Employee By ID</a></li>
             <!-- Add more links for other actions if needed -->
         </ul>
     </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // jQuery code to change link color on hover
+        $(document).ready(function() {
+            $('a').hover(function() {
+                // Change color to red on hover
+                $(this).css('color', 'red');
+            }, function() {
+                // Change color back to black when not hovered
+                $(this).css('color', 'black');
+            });
+        });
+    </script>
 </body>
 </html>

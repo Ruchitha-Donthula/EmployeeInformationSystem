@@ -1,7 +1,5 @@
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\EmployeeDataAccess.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\EmployeeDataAccess.pdb
-C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\EmployeeLibrary.dll
-C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\EmployeeLibrary.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Release\EmployeeDataAccess.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Release\EmployeeDataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\obj\Release\EmployeeDataAccess.csproj.CopyComplete
@@ -11,3 +9,5 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Rel
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\Newtonsoft.Json.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\log4net.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\Newtonsoft.Json.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\Employee.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeDataAccess\bin\Release\Employee.pdb

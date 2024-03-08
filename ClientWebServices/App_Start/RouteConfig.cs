@@ -13,16 +13,19 @@ namespace ClientWebServices
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Route for Employee controller
             routes.MapRoute(
                 name: "Employee",
                 url: "Employee",
                 defaults: new { controller = "Employee", action = "Index" }
-            );
+            ).DataTokens["UseNamespaceFallback"] = false; // Specify not to fallback to global namespace
 
+            // Default route for ClientWebServices.Controllers namespace
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "ClientWebServices.Controllers" }
             );
         }
     }

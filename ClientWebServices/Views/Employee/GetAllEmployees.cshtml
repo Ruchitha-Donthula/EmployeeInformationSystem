@@ -1,4 +1,4 @@
-﻿@model List<ClientWebServices.Models.Employee>
+﻿@model IEnumerable<ClientWebServices.Models.ViewModelEmployee>
 
 <!DOCTYPE html>
 <html>
@@ -19,6 +19,11 @@
         th {
             background-color: #f2f2f2;
         }
+
+        /* CSS for link hover color */
+        .link-hover:hover {
+            color: red; /* Change to your desired color */
+        }
     </style>
 </head>
 <body>
@@ -32,9 +37,7 @@
                 <th>Employee ID</th>
                 <th>Name</th>
                 <th>Salary</th>
-                <th>Edit</th>
-                <th>Delete</th>
-                <th>View</th>
+                <th>Actions</th>
             </tr>
             @foreach (var employee in Model)
             {
@@ -42,9 +45,12 @@
                     <td>@employee.EmployeeID</td>
                     <td>@employee.EmployeeName</td>
                     <td>@employee.EmployeeSalary</td>
-                    <td><button onclick="editEmployee('@employee.EmployeeID')">Edit</button></td>
-                    <td><button onclick="deleteEmployee('@employee.EmployeeID')">Delete</button></td>
-                    <td><button onclick="viewEmployee('@employee.EmployeeID')">View</button></td>
+                    <td>
+                        <!-- Add class 'link-hover' to the links -->
+                        <a href="/Employee/UpdateEmployeeForm?id=@employee.EmployeeID" class="link-hover">Edit</a> |
+                        <a href="/Employee/DeleteEmployee?id=@employee.EmployeeID" class="link-hover">Delete</a> |
+                        <a href="/Employee/GetEmployeeById?id=@employee.EmployeeID" class="link-hover">View</a>
+                    </td>
                 </tr>
             }
         </table>
@@ -54,23 +60,18 @@
         <p>No employees found.</p>
     }
 
+    <!-- Include jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        function editEmployee(employeeID) {
-            // Redirect to the UpdateEmployee action with the employee ID as parameter
-            window.location.href = "/Employee/UpdateEmployeeForm";
-        }
-
-        function deleteEmployee(employeeID) {
-            // Redirect to the DeleteEmployee action with the employee ID as parameter
-            window.location.href = "/Employee/DeleteEmployee?id=" + employeeID;
-        }
-
-        function viewEmployee(employeeID) {
-            // Redirect to the GetEmployeeById action with the employee ID as parameter
-            window.location.href = "/Employee/GetEmployeeById?id=" + employeeID;
-        }
+        // jQuery to add class 'link-hover' on hover
+        $(document).ready(function() {
+            $('.link-hover').hover(function() {
+                $(this).addClass('link-hover');
+            }, function() {
+                $(this).removeClass('link-hover');
+            });
+        });
     </script>
-
 
 </body>
 </html>

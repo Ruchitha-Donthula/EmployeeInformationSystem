@@ -2,7 +2,7 @@
 
 namespace ClientWebServices.Models
 {
-    public class Employee
+    public class ViewModelEmployee
     {
         [Required(ErrorMessage = "Employee ID is required.")]
         public int EmployeeID { get; set; }

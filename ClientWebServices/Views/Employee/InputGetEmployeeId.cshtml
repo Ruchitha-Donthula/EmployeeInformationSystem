@@ -3,19 +3,45 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>InputDeleteEmployeeId</title>
+    <title>InputGetEmployeeById</title>
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+        }
+
+        .error {
+            border-color: red;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h2>Enter Employee ID</h2>
-        <form action="@Url.Action("GetEmployeeById", "Employee")" method="get">
-            <input type="text" name="id" placeholder="Employee ID" required />
-            <button type="submit">Submit</button>
+        <h2>Get Employee by ID</h2>
+        <form id="getEmployeeByIdForm" action="@Url.Action("GetEmployeeById", "Employee")" method="get">
+            <input type="text" name="id" id="employeeId" placeholder="Employee ID" required />
+            <span class="error-message">Employee ID is required.</span>
+            <button id="submitButton" type="button">Submit</button> <!-- Change type to button -->
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery library -->
+    <script>
+        $(document).ready(function () {
+            $('#submitButton').click(function () { // Use click event on the button
+                var employeeId = $('#employeeId').val();
+                if (!employeeId) {
+                    $('.error-message').show();
+                    $('#employeeId').addClass('error');
+                } else {
+                    $('.error-message').hide();
+                    $('#employeeId').removeClass('error');
+                    $('#getEmployeeByIdForm').submit(); // Submit the form
+                }
+            });
+        });
+    </script>
 </body>
 </html>

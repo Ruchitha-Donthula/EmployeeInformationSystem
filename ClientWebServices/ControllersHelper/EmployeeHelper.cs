@@ -1,13 +1,13 @@
 ﻿using ClientWebServices.Models;
-using EmployeeLibrary;
+using EmployeeObjects;
 
 namespace ClientWebServices.Controllers
 {
     public class EmployeeHelper
     {
-        public static Models.Employee GetEmployeeViewModelFromModel(EmployeeLibrary.Employee employee)
+        public static ViewModelEmployee GetEmployeeViewModelFromModel(EmployeeObjects.Employee employee)
         {
-            Models.Employee viewModel = new Models.Employee
+            ViewModelEmployee viewModel = new ViewModelEmployee
             {
                 // Map properties from employee model to view model
                 EmployeeID = employee.EmployeeID,
@@ -17,14 +17,14 @@ namespace ClientWebServices.Controllers
             return viewModel;
         }
 
-        public static EmployeeLibrary.Employee GetEmployeeModelFromViewModel(Models.Employee viewModel)
+        public static EmployeeObjects.Employee GetEmployeeModelFromViewModel(ViewModelEmployee Employee)
         {
-            EmployeeLibrary.Employee employee = new EmployeeLibrary.Employee
+            EmployeeObjects.Employee employee = new EmployeeObjects.Employee
             {
                 // Map properties from view model to employee model
-                EmployeeID = viewModel.EmployeeID,
-                EmployeeName = viewModel.EmployeeName,
-                EmployeeSalary = viewModel.EmployeeSalary
+                EmployeeID = Employee.EmployeeID,
+                EmployeeName = Employee.EmployeeName,
+                EmployeeSalary = Employee.EmployeeSalary
             };
             return employee;
         }

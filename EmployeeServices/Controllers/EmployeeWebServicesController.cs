@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Web.Http;
-using EmployeeDataAccess;
-using EmployeeLibrary;
+using EmployeeObjects;
 using EmployeeServices.Filters;
+using EmployeeBusinessLogic; 
 
 namespace EmployeeServices.Controllers
 {
@@ -16,12 +16,12 @@ namespace EmployeeServices.Controllers
         [HttpGet]
         [Route("api/ReadEmployees")]
         [RequestResponseLoggingFilter]
-        [ExceptionHandlingFilter] 
+        [ExceptionHandlingFilter]
         public IHttpActionResult ReadEmployees()
         {
             try
             {
-                AccessEmployees.ReadEmployees(employeeDetailsFilePath);
+                new EmployeeBusiness().ReadEmployees(employeeDetailsFilePath);
                 return Ok();
             }
             catch (Exception)
@@ -35,7 +35,7 @@ namespace EmployeeServices.Controllers
         [RequestResponseLoggingFilter]
         public IHttpActionResult GetAllEmployees()
         {
-            List<Employee> employees = new Employee().GetAllEmployees();
+            List<Employee> employees = new EmployeeBusiness().GetAllEmployees();
             return Ok(employees);
         }
 
@@ -44,7 +44,7 @@ namespace EmployeeServices.Controllers
         [RequestResponseLoggingFilter]
         public IHttpActionResult GetEmployeeById(int id)
         {
-            Employee employee = new Employee().GetEmployee(id);
+            Employee employee = new EmployeeBusiness().GetEmployee(id);
             return Json(employee);
         }
 
@@ -53,7 +53,7 @@ namespace EmployeeServices.Controllers
         [RequestResponseLoggingFilter]
         public IHttpActionResult AddEmployee(Employee employee)
         {
-            new Employee().AddEmployee(employee.EmployeeID, employee.EmployeeName, employee.EmployeeSalary);
+            new EmployeeBusiness().AddEmployee(employee.EmployeeID, employee.EmployeeName, employee.EmployeeSalary);
             return Ok(employee);
         }
 
@@ -62,7 +62,7 @@ namespace EmployeeServices.Controllers
         [RequestResponseLoggingFilter]
         public IHttpActionResult UpdateEmployee(Employee employee)
         {
-            new Employee().UpdateEmployeeData(employee.EmployeeID, employee.EmployeeName, employee.EmployeeSalary);
+            new EmployeeBusiness().UpdateEmployeeData(employee.EmployeeID, employee.EmployeeName, employee.EmployeeSalary);
             return Ok("Employee updated successfully.");
         }
 
@@ -72,7 +72,7 @@ namespace EmployeeServices.Controllers
         [RequestResponseLoggingFilter]
         public IHttpActionResult DeleteEmployee(int id)
         {
-            new Employee().DeleteEmployee(id);
+            new EmployeeBusiness().DeleteEmployee(id);
             return Ok("Employee deleted successfully.");
         }
 
@@ -84,8 +84,8 @@ namespace EmployeeServices.Controllers
         {
             try
             {
-                List<Employee> employees = new Employee().GetAllEmployees();
-                SavingEmployees.SaveEmployees(employees, employeeDetailsFilePath);
+                List<Employee> employees = new EmployeeBusiness().GetAllEmployees();
+                new EmployeeBusiness().SaveEmployees(employees, employeeDetailsFilePath);
                 return Ok();
             }
             catch (Exception)

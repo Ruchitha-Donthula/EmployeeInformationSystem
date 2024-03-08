@@ -1,0 +1,6 @@
+C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\bin\Release\Employee.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\bin\Release\Employee.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Release\EmployeeObjects.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Release\EmployeeObjects.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Release\Employee.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Release\Employee.pdb

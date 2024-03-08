@@ -49,11 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeDataAccess\EmployeeDataAccess.csproj">
+      <Project>{c4c09ad7-93fa-4b5f-bc31-5508b7ffa72c}</Project>
+      <Name>EmployeeDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employee\EmployeeObjects.csproj">
+      <Project>{cabd9148-4486-4777-9096-e4d0ad4a0578}</Project>
+      <Name>EmployeeObjects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

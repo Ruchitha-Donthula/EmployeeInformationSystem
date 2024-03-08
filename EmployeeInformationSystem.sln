@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.34407.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeInformationSystem", "EmployeeInformationSystem\EmployeeInformationSystem.csproj", "{C73780F8-D102-47CF-A75C-98A9837C586E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLibrary", "EmployeeLibrary\EmployeeLibrary.csproj", "{FD7C4AF3-6A2C-4E78-B3C4-FCB41BF58DCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeBusinessLogic", "EmployeeLibrary\EmployeeBusinessLogic.csproj", "{FD7C4AF3-6A2C-4E78-B3C4-FCB41BF58DCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDataAccess", "EmployeeDataAccess\EmployeeDataAccess.csproj", "{C4C09AD7-93FA-4B5F-BC31-5508B7FFA72C}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWebServices", "ClientWebServices\ClientWebServices.csproj", "{CEA388AD-0823-42D4-B033-1C5840D7B098}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeServiceClient", "EmployeeClientServices\EmployeeServiceClient.csproj", "{67EC528B-4650-40B1-A4E0-B3BB72F62AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeObjects", "Employee\EmployeeObjects.csproj", "{CABD9148-4486-4777-9096-E4D0AD4A0578}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{67EC528B-4650-40B1-A4E0-B3BB72F62AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67EC528B-4650-40B1-A4E0-B3BB72F62AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67EC528B-4650-40B1-A4E0-B3BB72F62AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CABD9148-4486-4777-9096-E4D0AD4A0578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CABD9148-4486-4777-9096-E4D0AD4A0578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CABD9148-4486-4777-9096-E4D0AD4A0578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CABD9148-4486-4777-9096-E4D0AD4A0578}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

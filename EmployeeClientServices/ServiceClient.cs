@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using EmployeeLibrary;
+using EmployeeObjects;
 
 namespace EmployeeServiceClient
 {

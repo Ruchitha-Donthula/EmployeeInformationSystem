@@ -69,13 +69,17 @@
     <Compile Include="ServiceClientHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EmployeeLibrary\EmployeeLibrary.csproj">
+    <ProjectReference Include="..\EmployeeLibrary\EmployeeBusinessLogic.csproj">
       <Project>{fd7c4af3-6a2c-4e78-b3c4-fcb41bf58dca}</Project>
-      <Name>EmployeeLibrary</Name>
+      <Name>EmployeeBusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmployeeServices\EmployeeServices.csproj">
       <Project>{cbb7291d-99aa-4fd4-ac0e-36c77abb0bac}</Project>
       <Name>EmployeeServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employee\EmployeeObjects.csproj">
+      <Project>{cabd9148-4486-4777-9096-e4d0ad4a0578}</Project>
+      <Name>EmployeeObjects</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

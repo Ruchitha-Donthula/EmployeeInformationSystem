@@ -1,6 +1,8 @@
-﻿using log4net;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using EmployeeObjects;
+using log4net;
 
 namespace EmployeeDataAccess
 {
@@ -26,12 +28,13 @@ namespace EmployeeDataAccess
                                 if (int.TryParse(parts[0], out int id) && int.TryParse(parts[2], out int salary))
                                 {
                                     string name = parts[1];
-                                    EmployeeLibrary.Employee.employees.Add(new EmployeeLibrary.Employee
+                                    Employee employee = new Employee
                                     {
                                         EmployeeID = id,
                                         EmployeeName = name,
                                         EmployeeSalary = salary,
-                                    });
+                                    };
+                                    EmployeesList.Employees.Add(employee);
                                 }
                                 else
                                 {

@@ -1,6 +1,7 @@
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeClientServices.dll.config
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeClientServices.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeClientServices.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Employee.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeLibrary.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeServices.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Newtonsoft.Json.dll
@@ -26,6 +27,7 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeLibrary.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeServices.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\EmployeeServices.dll.config
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Employee.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Buffers.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeClientServices\bin\Debug\System.Memory.xml

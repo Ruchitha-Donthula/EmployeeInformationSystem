@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\EmployeeLibrary.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\Employee.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\log4net.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\Employee.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\log4net.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeBusinessLogic.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeBusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeBusinessLogic.csproj.CopyComplete
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\obj\Debug\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\EmployeeDataAccess.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeLibrary\bin\Debug\EmployeeDataAccess.pdb

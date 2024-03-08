@@ -1,10 +1,11 @@
 ﻿using EmployeeDataAccess;
-using EmployeeLibrary;
+using EmployeeBusinessLogic;
 using log4net;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
+using EmployeeObjects;
 
 namespace EmployeeSystem
 {
@@ -53,7 +54,7 @@ namespace EmployeeSystem
 
                         try
                         {
-                            new Employee().AddEmployee(id, name, salary);
+                            new EmployeeBusiness().AddEmployee(id, name, salary);
                             Console.WriteLine("Employee added successfully.");
                             log.Info($"Employee added: ID - {id}, Name - {name}, Salary - {salary}");
                         }
@@ -79,7 +80,7 @@ namespace EmployeeSystem
 
                         try
                         {
-                            new Employee().UpdateEmployeeData(id, name, salary);
+                            new EmployeeBusiness().UpdateEmployeeData(id, name, salary);
                             Console.WriteLine("Employee updated successfully.");
                             log.Info($"Employee updated: ID - {id}, Name - {name}, Salary - {salary}");
                         }
@@ -96,7 +97,7 @@ namespace EmployeeSystem
                             Console.WriteLine("Invalid input. Please enter a valid integer for employee ID.");
                         }
 
-                        new Employee().DeleteEmployee(id);
+                        new EmployeeBusiness().DeleteEmployee(id);
                         Console.WriteLine("Employee deleted successfully.");
                         log.Info($"Employee deleted: ID - {id}");
                         break;
@@ -109,7 +110,7 @@ namespace EmployeeSystem
 
                         try
                         {
-                            Employee emp = new Employee().GetEmployee(id);
+                            Employee emp = new EmployeeBusiness().GetEmployee(id);
                             if (emp != null)
                             {
                                 Console.WriteLine(emp.EmployeeID + "," + emp.EmployeeName + "," + emp.EmployeeSalary);
@@ -130,7 +131,7 @@ namespace EmployeeSystem
                     case 5:
                         try
                         {
-                            List<Employee> employees = new Employee().GetAllEmployees();
+                            List<Employee> employees = new EmployeeBusiness().GetAllEmployees();
                             foreach (Employee emp in employees)
                             {
                                 Console.WriteLine(emp.EmployeeID + "," + emp.EmployeeName + "," + emp.EmployeeSalary);
@@ -146,7 +147,7 @@ namespace EmployeeSystem
                     case 6:
                         try
                         {
-                            AccessEmployees.ReadEmployeeData(employeedetailsfile);
+                            AccessEmployees.ReadEmployees(employeedetailsfile);
                             Console.WriteLine("Employee data read successfully.");
                             log.Info("Employee data read successfully.");
                         }
@@ -164,8 +165,8 @@ namespace EmployeeSystem
                     case 7:
                         try
                         {
-                            List<Employee> employees = new Employee().GetAllEmployees();
-                            SavingEmployees.SaveEmployeeData(employees, employeedetailsfile);
+                            List<Employee> employees = new EmployeeBusiness().GetAllEmployees();
+                            SavingEmployees.SaveEmployees(employees, employeedetailsfile);
                             Console.WriteLine("Employee data saved successfully.");
                             log.Info("Employee data saved successfully.");
                         }

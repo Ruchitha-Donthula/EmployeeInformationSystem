@@ -14,3 +14,5 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.csproj.CopyComplete
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.exe
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\obj\Debug\EmployeeInformationSystem.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\Employee.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeInformationSystem\bin\Debug\Employee.pdb

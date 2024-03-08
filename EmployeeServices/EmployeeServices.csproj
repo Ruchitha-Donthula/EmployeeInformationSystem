@@ -16,7 +16,7 @@
     <AssemblyName>EmployeeServices</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44393</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -254,13 +254,13 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EmployeeDataAccess\EmployeeDataAccess.csproj">
-      <Project>{c4c09ad7-93fa-4b5f-bc31-5508b7ffa72c}</Project>
-      <Name>EmployeeDataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EmployeeLibrary\EmployeeLibrary.csproj">
+    <ProjectReference Include="..\EmployeeLibrary\EmployeeBusinessLogic.csproj">
       <Project>{fd7c4af3-6a2c-4e78-b3c4-fcb41bf58dca}</Project>
-      <Name>EmployeeLibrary</Name>
+      <Name>EmployeeBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employee\EmployeeObjects.csproj">
+      <Project>{cabd9148-4486-4777-9096-e4d0ad4a0578}</Project>
+      <Name>EmployeeObjects</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -281,9 +281,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51745</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/EmployeeServices</IISUrl>
-          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost/EmployeeServices</IISAppRootUrl>
+          <IISUrl>http://localhost:51745/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

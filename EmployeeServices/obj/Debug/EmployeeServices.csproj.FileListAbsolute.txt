@@ -51,6 +51,7 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\rosly
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\roslyn\VBCSCompiler.exe
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\Antlr3.Runtime.dll
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\Employee.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\EmployeeDataAccess.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\EmployeeLibrary.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\log4net.dll
@@ -70,6 +71,7 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\Syste
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\WebGrease.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\EmployeeDataAccess.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\EmployeeLibrary.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\Employee.pdb
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\log4net.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\Newtonsoft.Json.xml
 C:\Users\Admin\source\repos\EmployeeInformationSystem\EmployeeServices\bin\System.Net.Http.Formatting.xml

@@ -7,14 +7,41 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>InputDeleteEmployeeId</title>
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+        }
+
+        .error {
+            border-color: red;
+        }
+    </style>
 </head>
 <body>
     <div>
         <h2>Delete Employee by ID</h2>
-        <form action="@Url.Action("DeleteEmployee", "Employee")" method="get">
-            <input type="text" name="id" placeholder="Employee ID" required />
-            <button type="submit">Delete</button>
+        <form id="deleteEmployeeForm" action="@Url.Action("DeleteEmployee", "Employee")" method="get">
+            <input type="text" name="id" id="employeeId" placeholder="Employee ID" required />
+            <span class="error-message">Employee ID is required.</span>
+            <button id="submitButton" type="submit">Delete</button>
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery library -->
+    <script>
+        $(document).ready(function () {
+            $('#submitButton').click(function (e) {
+                var employeeId = $('#employeeId').val();
+                if (!employeeId) {
+                    $('.error-message').show();
+                    $('#employeeId').addClass('error');
+                    e.preventDefault();
+                } else {
+                    $('.error-message').hide();
+                    $('#employeeId').removeClass('error');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

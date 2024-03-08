@@ -1,38 +1,78 @@
-﻿@model ClientWebServices.Models.Employee
+﻿@model ClientWebServices.Models.ViewModelEmployee
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Add Employee</title>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+            .form-group label {
+                display: inline-block;
+                width: 120px; /* Adjust as needed */
+            }
+
+            .form-group input[type="text"] {
+                width: 200px; /* Adjust as needed */
+                float: left; /* Align textboxes to the left */
+                margin-right: 10px; /* Add space between textboxes and labels */
+                border: 1px solid #ccc; /* Default border color */
+            }
+
+            .form-group input.error {
+                border-color: red; /* Border color for error state */
+            }
+
+        .validation-message {
+            color: red;
+            margin-left: 5px;
+        }
+
+        .submit-button {
+            margin-top: 20px;
+            text-align: left; /* Align the submit button to the left */
+        }
+
+            .submit-button input[type="submit"] {
+                width: auto;
+            }
+    </style>
 </head>
 <body>
     <div>
         <h2>Add Employee</h2>
-        @using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post))
+        @using (Html.BeginForm("AddEmployee", "Employee", FormMethod.Post, new { id = "employeeForm" }))
         {
-            <div>
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.EmployeeID, new { @class = "employeeID" })
                 @Html.LabelFor(model => model.EmployeeID)
-                @Html.TextBoxFor(model => model.EmployeeID)
-                @Html.ValidationMessageFor(model => model.EmployeeID)
+                <span class="validation-message">@Html.ValidationMessageFor(model => model.EmployeeID)</span>
             </div>
-            <div>
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.EmployeeName, new { @class = "employeeName" })
                 @Html.LabelFor(model => model.EmployeeName)
-                @Html.TextBoxFor(model => model.EmployeeName)
-                @Html.ValidationMessageFor(model => model.EmployeeName)
+                <span class="validation-message">@Html.ValidationMessageFor(model => model.EmployeeName)</span>
             </div>
-            <div>
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.EmployeeSalary, new { @class = "employeeSalary" })
                 @Html.LabelFor(model => model.EmployeeSalary)
-                @Html.TextBoxFor(model => model.EmployeeSalary)
-                @Html.ValidationMessageFor(model => model.EmployeeSalary)
+                <span class="validation-message">@Html.ValidationMessageFor(model => model.EmployeeSalary)</span>
             </div>
-            <div>
-                <input type="submit" value="Submit" />
+            <div class="submit-button">
+                <input type="button" id="submitButton" value="Submit" />
             </div>
         }
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script> <!-- jQuery Validation plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script> <!-- jQuery Unobtrusive Validation -->
+    <script>
+        $(document).ready(function () {
+            $('#submitButton').click(function () {
+                $('#employeeForm').submit();
+            });
+        });
+    </script>
 </body>
 </html>
