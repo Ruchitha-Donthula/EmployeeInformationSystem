@@ -208,6 +208,7 @@
     <Content Include="Views\Employee\UpdateEmployeeForm.cshtml" />
     <Content Include="Views\Employee\InputGetEmployeeId.cshtml" />
     <Content Include="Views\Employee\InputDeleteEmployeeId.cshtml" />
+    <Content Include="Views\Employee\GetEmployeeByJquery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

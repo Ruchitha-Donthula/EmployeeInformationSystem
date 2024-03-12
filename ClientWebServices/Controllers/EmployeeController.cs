@@ -45,6 +45,10 @@ namespace ClientWebServices.Controllers
             }
         }
 
+        public ActionResult GetEmployeeByJquery()
+        {
+            return View();
+        }
         public ActionResult InputGetEmployeeId()
         {
             var employee = new ViewModelEmployee();
@@ -200,6 +204,30 @@ namespace ClientWebServices.Controllers
                 return Content($"An error occurred while retrieving the employee: {ex.Message}");
             }
         }
+
+        [HttpGet]
+        public async Task<JsonResult> GetEmployeeByIdUsingJQuery(int id)
+        {
+            try
+            {
+                EmployeeObjects.Employee Employee = await serviceClient.GetEmployeeById(id);
+
+                if (Employee != null)
+                {
+                    var modelEmployee = EmployeeHelper.GetEmployeeViewModelFromModel(Employee);
+                    return Json(modelEmployee, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json(new { error = "Employee not found" }, JsonRequestBehavior.AllowGet);
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { error = $"An error occurred while retrieving the employee: {ex.Message}" }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
 
         [HttpGet]
         public async Task<ActionResult> DeleteEmployee(int id)

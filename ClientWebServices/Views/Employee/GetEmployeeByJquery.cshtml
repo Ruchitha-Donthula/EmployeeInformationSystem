@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetEmployeeByJquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Get Employee Details</h2>
+        <input type="text" id="employeeId" placeholder="Enter Employee ID">
+        <button id="getEmployeeBtn">Get Employee</button>
+        <div id="employeeDetails">
+            <!-- Employee details will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#getEmployeeBtn').click(function () {
+                var employeeId = $('#employeeId').val();
+                if (employeeId) {
+                    getEmployeeById(employeeId);
+                } else {
+                    $('#employeeDetails').html('<p>Please enter an Employee ID.</p>');
+                }
+            });
+
+            function getEmployeeById(employeeId) {
+                $.ajax({
+                    type: "GET",
+                    url: "/Employee/GetEmployeeByIdUsingJQuery?id=" + employeeId,
+                    success: function (employee) {
+                        $('#employeeDetails').html('<h3>Employee Details</h3>' +
+                            '<p>ID: ' + employee.EmployeeID + '</p>' +
+                            '<p>Name: ' + employee.EmployeeName + '</p>' +
+                            '<p>Salary: ' + employee.EmployeeSalary + '</p>');
+                    },
+                    error: function () {
+                        $('#employeeDetails').html('<p>Employee with ID ' + employeeId + ' not found.</p>');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

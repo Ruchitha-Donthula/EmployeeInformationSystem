@@ -3,3 +3,4 @@ C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\bin\Debug\Employe
 C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Debug\EmployeeObjects.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Debug\Employee.dll
 C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Debug\Employee.pdb
+C:\Users\Admin\source\repos\EmployeeInformationSystem\Employee\obj\Debug\EmployeeObjects.csproj.AssemblyReference.cache
